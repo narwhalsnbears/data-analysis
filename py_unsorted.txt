@@ -1,0 +1,66 @@
+## Unsorted references
+
+
+## Lists
+mylist = ['Point', 'Line']
+mylist = [1, 'Point', 2, 'Line', 3, 'Polygon']
+len(my_list)
+type(mylist[0])
+mylist[1]
+type(mylist[0])
+type(mylist[1])
+mylist[1] = 'Multipoint'
+mylist
+
+mylist[1:] #all items starting at position 1
+mylist[1::2] #every other item
+mylist[-1] #last item on list
+mylist[:-1] #all items, except last item
+del mylist[-1]
+
+mylist.append('Raster')
+mylist.remove('Raster')
+
+1st_years = range(2000, 2018) ## Collection dates .years
+
+len(1st_years)
+max(1st_years)
+min(1st_years)
+
+if (2015 in st_years): ## Verify value "2015"
+	print "Value found in list"
+else:
+	print "Value not in list"
+
+st_years.index(2015) ## Location in list
+
+for year in st_years:
+print "processing" + str(year) + "\n"
+
+
+## Reclassify
+def reclassify(invalue):
+	if (invalue < 2):
+		txtclass = "Small"
+	elif (invalue < 4):
+		txtclass = "Medium"
+	elif (invalue >= 4):
+		txtclass = "Large"
+	else:
+		txtclass = "Undefined"
+	return txtclass
+
+
+## Shape Properties
+
+## Function to check if shape has multiple parts
+def multipart_check(inshape):
+shape_count = inshape.partCount
+if(shape_count > 1):
+	return "Yes"
+else:
+	return "No"
+
+## Shapetype
+fc_desc = arcpy.Describe(fc)
+print fc_desc.shapeType

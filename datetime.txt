@@ -1,0 +1,17 @@
+## Date/Time
+
+import datetime
+datetime_object = datetime.datetime.now() #yr, mo, day, hr, min, sec, totalsec
+datetime_object.day
+datetime_object.month
+datetime_object.year
+datetime_object.isoweekday()
+help (datetime_object)
+
+str_datetime = '12/14/2016 08:15:33'
+datetime_object = datetime.datetime.strptime(str_date, '%m/%d/%Y %I:%M:%S')
+
+def date_info(strDateTime)
+	#date_info input date time, output integer
+	import datetime
+	datetime_object = datetime.datetime.strptime(str_date, '%m/%d/%Y %I:%M:%S')
